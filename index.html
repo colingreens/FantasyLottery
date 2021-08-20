@@ -15,16 +15,12 @@
     <header>
       <form>
         <label for="teams">How many teams</label>
-        <input type="number" name="teamNum" id="teamNum" min="0" max="100">        
+        <input type="number" name="teamNum" value="6" id="teamNum" min="0" max="100">        
         <input type="button" value="Team +" onclick="buildTeamTable()">
       </form>
 
-      <table id="teamTable">
-        <tr>
-          <th>Team Name</th>
-          <th>First Pick Percent</th>
-        </tr>
-      </table>        
+      <table id="teamTable"></table> 
+      <button onclick="buildOddsTable()">Calculate</button>       
 </header>
 
 <section>
@@ -37,71 +33,7 @@
   </nav>
   
   <h2>Current Odds</h2>
-    <table style="width:75%">
-        <tr>
-          <th>Team</th>
-          <th>1</th>
-          <th>2</th>
-          <th>3</th>
-          <th>4</th>
-          <th>5</th>
-          <th>6</th>
-        </tr>
-        <tr>
-          <td>Team1</td>
-          <td>25</td>
-          <td>15</td>
-          <td>10</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-        </tr>
-        <tr>
-            <td>Team2</td>
-            <td>25</td>
-            <td>13</td>
-            <td>10</td>
-            <td>10</td>
-            <td>10</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Team3</td>
-            <td>25</td>
-            <td>13</td>
-            <td>10</td>
-            <td>10</td>
-            <td>10</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Team4</td>
-            <td>12.5</td>
-            <td>13</td>
-            <td>10</td>
-            <td>10</td>
-            <td>10</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Team5</td>
-            <td>7.5</td>
-            <td>13</td>
-            <td>10</td>
-            <td>10</td>
-            <td>10</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Team6</td>
-            <td>5</td>
-            <td>13</td>
-            <td>10</td>
-            <td>10</td>
-            <td>10</td>
-            <td>10</td>
-        </tr>
-      </table>
+    <table id="oddsTable" style="width:75%"></table>
 </section>
 
 <footer>
