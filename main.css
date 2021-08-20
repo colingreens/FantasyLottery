@@ -1,5 +1,5 @@
 :root {
-    --green: #727572;
+    --lightBack: #a1a5a1;
     --white: #ffffff;
     --black: #000000;
 }
@@ -17,7 +17,7 @@ header{
     background-color: #666;
     padding: 30px;
     text-align: center;
-    font-size: 35px;
+    font-size: 20px;
     color: white;
 }
 
@@ -32,7 +32,7 @@ section {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    background: #ccc;
+    background: var(--lightBack);
     padding: 20px;
   }
   
@@ -76,7 +76,7 @@ ul {
 }
 
 .light-theme {
-   --bg: var(--green);
+   --bg: var(--lightBack);
    --fontColor: var(--black);
    --btnBg:var(--black);
    --btnFontColor:var(--white);
@@ -84,7 +84,7 @@ ul {
 
 .dark-theme {
     --bg: var(--black);
-    --fontColor:var(--green);
+    --fontColor:var(--lightBack);
     --btnBg: var(--white);
     --btnFontColor: var(--black);
 
