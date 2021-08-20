@@ -1,17 +1,19 @@
 'use strict'
 
-let teamPool = [];
-let lotteryPool = [];
+function Lottery(){
+    let teamPool = [];
+    let lotteryPool = [];
 
-teamPool.push({name:"TeamOne", odds:25});
-teamPool.push({name:"TeamTwo", odds:25});
-teamPool.push({name:"TeamThree", odds:25});
-teamPool.push({name:"TeamFour", odds:10});
-teamPool.push({name:"TeamFive", odds:10});
-teamPool.push({name:"TeamSix", odds:5});
+    teamPool.push({name:"TeamOne", odds:25});
+    teamPool.push({name:"TeamTwo", odds:25});
+    teamPool.push({name:"TeamThree", odds:25});
+    teamPool.push({name:"TeamFour", odds:10});
+    teamPool.push({name:"TeamFive", odds:10});
+    teamPool.push({name:"TeamSix", odds:5});
 
-teamPool.forEach( item => Populate(item));
-LotteryTime(lotteryPool);
+    teamPool.forEach( item => Populate(item));
+    LotteryTime(lotteryPool);   
+}
 
 function Populate(item){
 
