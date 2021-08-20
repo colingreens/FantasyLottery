@@ -12,10 +12,22 @@ teamPool.push({name:"TeamSix", odds:5});
 
 teamPool.forEach( item => Populate(item));
 console.log(lotteryPool.length);
+lotteryPool.forEach(item => console.log(item));
+
+while (lotteryPool.length > 0) {
+    var selectedTeam = lotteryPool[GetRandomInt(lotteryPool.length)];
+    console.log("Selected Pick Goes to"+ selectedTeam.name);
+    lotteryPool = lotteryPool.filter(item => item.name != selectedTeam.name);
+}
+
 
 function Populate(item){
 
-    for (let i = 0; i < item.odds.length; i++){
+    for (let i = 0; i < item.odds; i++){
         lotteryPool.push(item);
     }
+}
+
+function GetRandomInt(max){
+    return Math.floor(Math.random() * max);
 }
