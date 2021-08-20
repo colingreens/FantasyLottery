@@ -1,1 +1,1 @@
-# HamDynasty
+# Fantasy Lottery
