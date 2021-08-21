@@ -20,20 +20,32 @@ function buildOddsTable(){
 
   var oddsTable = document.getElementById("oddsTable");
   var teamTable = document.getElementById("teamTable");
+  var teamNum = parseInt($('#teamNum').val());
 
   var teamCount = teamTable.rows.length -1;
 
   var header = oddsTable.insertRow(0);
-  header.insertCell(0).innerHTML = "Team Name";
-  header.insertCell(1).innerHTML = "First Pick Percent";
+  header.insertCell().innerHTML = "Team Name";
 
+  for (let i = 0; i < teamNum; i++) {
+    header.insertCell().innerHTML = "Pick" + (i + 1); 
+  }
+  
+  var initalProbabilities = [];
   for (let i = 0; i < teamCount; i++) {
     var row = oddsTable.insertRow(i+1);
 
     var teamName = teamTable.rows[i+1].cells.item(0).children[0].value;
     var teamOdds = teamTable.rows[i+1].cells.item(1).children[0].value;
+    initalProbabilities.push(teamOdds);
 
-    row.insertCell(0).innerHTML = teamName;
-    row.insertCell(1).innerHTML = teamOdds;
+    row.insertCell().innerHTML = teamName;
+    row.insertCell().innerHTML = teamOdds;
+  }
+
+  for (let i = 0; i < teamNum; i++) {
+    initalProbabilities.shift();
+    var totalProb = initalProbabilities.reduce((a,b) => a + b);
+    //var conditionalProb = 
   }
 }
