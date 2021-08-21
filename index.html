@@ -4,44 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ham Dynasty Tankathon</title>
+    <title>Fantasy Tankathon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body class = "light-theme">    
-    <h1>Tankathon</h1>
-
-    <button class="btn">Draft</button>
-    <header>
+    <h1>Fantasy Tankathon</h1>
+    <nav>
+      <a href="league/HamDynasty.html" class="badge badge-primary">HamDynasty</a>
+    </nav>
+    <header>     
       <form>
         <label for="teams">How many teams</label>
         <input type="number" name="teamNum" value="6" id="teamNum" min="0" max="100">        
         <input type="button" value="Team +" onclick="buildTeamTable()">
+        <input type="button" value="Calculate" onclick="buildOddsTable()">
+        <input type="button" value="Draft!" onclick="buildDraftResultsTable()">
       </form>
 
-      <table id="teamTable"></table> 
-      <button onclick="buildOddsTable()">Calculate</button>  
-      <button onclick="buildDraftResultsTable()">Draft!</button>     
+      <table id="teamTable" style="width:50%;margin-left:auto;margin-right:auto;" class="table table-hover">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
 </header>
 
 <section>
-  <nav>
-    <table id="resultsTable"></table>
-  </nav>
-  
-  <h2>Current Odds</h2>
-    <table id="oddsTable" style="width:75%"></table>
+  <table id="resultsTable" style="width:25%" class="table table-hover">
+    <thead></thead>
+    <tbody></tbody>
+  </table>
+
+  <table id="oddsTable" style="width:75%" class="table"></table>
 </section>
 
 <footer>
-  <p>Footer</p>
-  <div>
-    
-</div>
+  <p>Instructions: Add your teams then name and give odds. Odds work like ping pong balls in a lottery.</p>
+  <p>So if Team 1 has 50, Team 2 has 25 and Team 3 has 25. Team 1 = 50% odds.</p>
+  <p>Numbers don't have to add up to 100, it's whatever your total sample size is.</p>
+  <p>For half percents just go up by a factor of 10. 17.5% = 175 with a populatio of 1000</p>
 </footer> 
-  
-    <script src="js/app.js"></script>
-    <script src="js/lottery.js"></script>
-    <noscript>You need to enable JavaScript to view the full site.</noscript>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+  <script src="js/lottery.js"></script>
+  <noscript>You need to enable JavaScript to view the full site.</noscript>
 </body>
 </html>

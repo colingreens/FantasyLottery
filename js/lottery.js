@@ -1,6 +1,7 @@
 'use strict'
 
-var resultsTable = document.getElementById("resultsTable");
+var resultsTableBody = document.getElementById("resultsTable").getElementsByTagName('tbody')[0];
+var resultsTableHead = document.getElementById("resultsTable").getElementsByTagName('thead')[0];
 var lotteryPool = [];
 
 function Populate(item){
@@ -15,11 +16,15 @@ function GetRandomInt(max){
 }
 
 function LotteryTime(lotteryPool){
+    var header = resultsTableHead.insertRow();
+    header.insertCell().innerHTML = "Pick";
+    header.insertCell().innerHTML = "Team";
+    
     var i = 0;
     while (lotteryPool.length > 0) {
         var selectedTeam = lotteryPool[GetRandomInt(lotteryPool.length)];
         i++;
-        var row = resultsTable.insertRow(i);
+        var row = resultsTableBody.insertRow();
         row.insertCell(0).innerHTML = i;
         row.insertCell(1).innerHTML = selectedTeam.name;
         lotteryPool = lotteryPool.filter(item => item.name != selectedTeam.name);
@@ -33,10 +38,6 @@ function buildDraftResultsTable(){
 
     var teamCount = teamTable.rows.length -1;
 
-    var header = resultsTable.insertRow(0);
-    header.insertCell(0).innerHTML = "Pick";
-    header.insertCell(1).innerHTML = "Team";
-
     for (let i = 0; i < teamCount; i++) {
         
         var teamName = teamTable.rows[i+1].cells.item(0).children[0].value;
@@ -46,6 +47,5 @@ function buildDraftResultsTable(){
 
     teamPool.forEach( item => Populate(item));
     LotteryTime(lotteryPool);
-  
   
   }
