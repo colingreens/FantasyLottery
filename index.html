@@ -25,37 +25,38 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
+            <li role="presentation" class="active"><a href="#">F</a></li>
+            <li role="presentation"><a href="#">U</a></li>
+            <li role="presentation"><a href="#">Goons</a></li>
           </ul>
         </nav>
         <h3 class="text-muted">Fantasy Tools</h3>
       </div>
 
-      <div class="jumbotron">
-        <h1>Your Draft Lottery!</h1>
-        <p class="lead"> </p>
-        <p> <form>
-            <label for="teams">How many teams</label>
-            <input type="number" name="teamNum" value="6" id="teamNum" min="0" max="100">        
-            <input type="button" value="Team +" onclick="buildTeamTable()">
-            <!-- <input type="button" value="Calculate" onclick="buildOddsTable()"> -->
-            <input type="button" value="Draft!" onclick="buildDraftResultsTable()">
-          </form></p>
+        <div class="jumbotron">
+            <h1>Your Draft Lottery!</h1>
+            <p class="lead"> </p>     
+                
+            <table id="teamTable" style="width:50%;margin-left:auto;margin-right:auto;" class="table table-hover">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
 
-          <table id="teamTable" style="width:50%;margin-left:auto;margin-right:auto;" class="table table-hover">
-            <thead></thead>
-            <tbody></tbody>
-          </table>
-      </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="teamNum" placeholder="Number of Teams (0-100)" aria-describedby="basic-addon2">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-primary" onclick="buildTeamTable()">Teams+</button>
+                <button type="button" class="btn btn-primary" onclick="buildDraftResultsTable()">Draft!</button>
+            </div>                       
+        </div>
 
-      <div class="row marketing">
+      <div class="row marketing">      
 
         <table id="resultsTable" style="width:75%;margin-left:auto;margin-right:auto;" class="table table-hover">
             <thead></thead>
             <tbody></tbody>
-          </table>
+        </table>
 
         <div class="col-lg-6">
           <h4>How it works:</h4>
