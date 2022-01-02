@@ -41,6 +41,7 @@ function buildOddsTable(){
 
     row.insertCell().innerHTML = teamName;
     row.insertCell().innerHTML = teamOdds;
+    
   }
 
   for (let i = 0; i < teamNum; i++) {
