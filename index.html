@@ -47,7 +47,8 @@
             <input type="text" class="form-control" id="teamNum" placeholder="Number of Teams (0-100)" aria-describedby="basic-addon2">
             <span class="input-group-btn">
                 <button type="button" class="btn btn-primary" onclick="buildTeamTable()">Teams+</button>
-                <button type="button" class="btn btn-primary" onclick="buildDraftResultsTable()">Draft!</button>
+                <button type="button" class="btn btn-primary" onclick="buildDraftResultsTable()">Draft</button>
+                <button type="button" class="btn btn-primary" onclick="showLastPick()">Show Pick</button>
         </div> 
 
         <table id="resultsTable" style="width:75%;margin-left:auto;margin-right:auto;" class="table table-hover">
@@ -59,23 +60,12 @@
         <div class="col-lg-6">
           <h4>How it works:</h4>
           <p>First select the amount of teams in your league. Then name them and set their odds.</p>
-
-          <!-- <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p> -->
         </div>
 
         <div class="col-lg-6">
           <h4>The Odds:</h4>
           <p>The odds work like ping pong balls in real draft lottery. So if Team 1 has 75 and Team 2 has 25, Team 1 will have a 75% chance at the first overall pick.</p>
 
-          <!-- <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p> -->
         </div>
       </div>
 
